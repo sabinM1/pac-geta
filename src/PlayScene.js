@@ -137,7 +137,7 @@ PlayScene.prototype.loadMap = function (map) {
         pellet.setPosition(position);
         this._pellets.push(pellet);
       }
-      else if (tile == 'O') {
+      else if (tile == 'O' && hatPowerUps) {
         var powerPellet = new PowerPellet(this);
         powerPellet.setPosition(position);
         this._pellets.push(powerPellet);

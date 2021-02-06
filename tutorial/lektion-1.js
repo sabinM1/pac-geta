@@ -1,8 +1,13 @@
 
+// Zahlwerte
 var leben = 5
-var spielername = "testesttest"
+
+//Textwerte
+var spielername = "Man"
 var spieltitel = "Pac-" + spielername
 
+//Wahrheitswerte
+var hatPowerUps = false
 
 
 
