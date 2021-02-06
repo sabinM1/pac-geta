@@ -1,5 +1,5 @@
 var FPS = 24;
-var CANVAS_WIDTH = 540;
+var CANVAS_WIDTH = 800;
 var CANVAS_HEIGHT = 484;
 
 function GameRunner() {

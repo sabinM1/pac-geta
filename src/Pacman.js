@@ -18,7 +18,7 @@ function Pacman(scene, game) {
   this._resetDeathFrame();
   this._playDiesAnimation = true;
   
-  this._livesCount = 2;
+  this._livesCount = leben;
   this._eatenPelletSound = 'pellet1';
 }
 
