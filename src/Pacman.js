@@ -73,18 +73,40 @@ Pacman.prototype.checkIfOutOfMapBounds = function () {
   this._sprite.checkIfOutOfMapBounds();
 };
 
+Pacman.prototype.bewegeHoch = function () {
+  this.requestNewDirection(DIRECTION_UP)
+};
+
+Pacman.prototype.bewegeRunter = function () {
+  this.requestNewDirection(DIRECTION_DOWN)
+};
+
+Pacman.prototype.bewegeRechts = function ()
+{
+  this.requestNewDirection(DIRECTION_RIGHT)
+};
+
+Pacman.prototype.bewegeLinks = function ()
+{
+  this.requestNewDirection(DIRECTION_LEFT)
+};
+
 Pacman.prototype.keyPressed = function (key) {
   if (key == KEY_RIGHT) {
-    this.requestNewDirection(DIRECTION_RIGHT);
+    // this.requestNewDirection(DIRECTION_RIGHT);
+    bewege("rechts")
   }
   else if (key == KEY_LEFT) {
-    this.requestNewDirection(DIRECTION_LEFT);
+    // this.requestNewDirection(DIRECTION_LEFT);
+    bewege("links")
   }
   else if (key == KEY_UP) {
-    this.requestNewDirection(DIRECTION_UP);
+    //this.requestNewDirection(DIRECTION_UP);
+    bewege("oben")
   }
   else if (key == KEY_DOWN) {
-    this.requestNewDirection(DIRECTION_DOWN);
+    // this.requestNewDirection(DIRECTION_DOWN);
+    bewege("unten")
   }
 };
 
