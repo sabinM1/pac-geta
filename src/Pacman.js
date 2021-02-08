@@ -66,7 +66,28 @@ Pacman.prototype.advanceFrame = function () {
 };
 
 Pacman.prototype.move = function () {
-  this._sprite.move(this._sprite.getDirection());
+  var direction = this._sprite.getDirection();
+  var x = this._sprite._rect._x;
+  var y = this._sprite._rect._y;
+  var speed = this._sprite._speed;
+  if(direction == DIRECTION_RIGHT)
+  {
+    this._sprite._rect._x = bewegeRechts(x,y,speed);
+  }
+  if(direction == DIRECTION_LEFT)
+  {
+    this._sprite._rect._x = bewegeLinks(x,y, speed);
+  }
+  if(direction == DIRECTION_UP)
+  {
+    this._sprite._rect._y = bewegeHoch(x,y, speed);
+  }
+  if(direction == DIRECTION_DOWN)
+  {
+    this._sprite._rect._y = bewegeRunter(x,y, speed);
+  }
+
+  //this._sprite.move(this._sprite.getDirection());
 };
 
 Pacman.prototype.checkIfOutOfMapBounds = function () {
