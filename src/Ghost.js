@@ -29,6 +29,7 @@ function Ghost(name, scene) {
   this._blinkTimer = 0;
   this._vulnerableTimeLeft = 0;
   this._blink = false;
+  this._moving = false;
 }
 
 Ghost.prototype.getName = function () {
@@ -43,8 +44,13 @@ Ghost.prototype.isVisible = function () {
   return this._visible;
 };
 
+Ghost.prototype.starte = function()
+{
+  this._moving = true;
+}
+
 Ghost.prototype.tick = function () {
-  if (this._scene.isPause()) {
+  if (this._scene.isPause() || !this._moving) {
     return;
   }
   

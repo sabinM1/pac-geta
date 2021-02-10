@@ -178,6 +178,7 @@ PlayScene.prototype.loadMap = function (map) {
       }
     }
   }
+  starteGeister(this._ghosts)
   
   for (var i in this._ghosts) {
     this._ghosts[i].setRandomDirectionNotBlockedByWall();
