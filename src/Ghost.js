@@ -29,11 +29,18 @@ function Ghost(name, scene) {
   this._blinkTimer = 0;
   this._vulnerableTimeLeft = 0;
   this._blink = false;
+  this._moving = true;
 }
 
 Ghost.prototype.getName = function () {
   return this._name;
 };
+
+Ghost.prototype.findPacman = function () 
+{
+  var coord = suchePacman(this._sprite.x, this._sprite.y);
+  this._moving = istPacman(coord[0], coord[1])
+}
 
 Ghost.prototype.setVisible = function (value) {
   this._visible = value;
@@ -44,7 +51,7 @@ Ghost.prototype.isVisible = function () {
 };
 
 Ghost.prototype.tick = function () {
-  if (this._scene.isPause()) {
+  if (this._scene.isPause() || !this._moving ) {
     return;
   }
   

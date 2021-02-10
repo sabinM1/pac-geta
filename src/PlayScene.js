@@ -2,6 +2,33 @@ var TILE_SIZE = 16;
 
 var EVENT_PLAYSCENE_READY = 'EVENT_PLAYSCENE_READY';
 
+function istWand(x,y)
+{
+  if(x <0)
+  {
+    return true;
+  }
+  if(y<0)
+  {
+    return true;
+  }
+
+  var walls = gameRunner._game._scene._walls
+  for(wall in walls){
+    if(wall._rect.x == x && wall._rect.y == y)
+    {
+      return true;
+    }
+  }
+  return false;
+}
+
+function istPacman(x,y)
+{
+    var pacman = gameRunner._game._scene._pacman
+    return (pacman._sprite.x == x && pacman._sprite.y == y)
+}
+
 function PlayScene(game, maps) {
   this._game = game;
   this._maps = maps || this._getDefaultMaps();
@@ -178,7 +205,7 @@ PlayScene.prototype.loadMap = function (map) {
       }
     }
   }
-  
+  this._ghosts[0].findPacman();
   for (var i in this._ghosts) {
     this._ghosts[i].setRandomDirectionNotBlockedByWall();
   }
