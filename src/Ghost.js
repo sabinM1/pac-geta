@@ -11,6 +11,10 @@ var GHOST_SPEED_FAST = 8;
 var GHOST_SPEED_NORMAL = 4;
 var GHOST_SPEED_SLOW = 2;
 
+function starte(g){
+  g.starte()
+}
+
 function Ghost(name, scene) {
   this._name = name;
   this._scene = scene;
