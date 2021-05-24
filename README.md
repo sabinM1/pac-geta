@@ -1,4 +1,4 @@
-JavaScript Workshop using a Pacman Implementation
+JavaScript Pac-Man Workshop
 =====================================
 
 Welcome! 
