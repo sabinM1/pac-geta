@@ -1,9 +1,9 @@
 
 // Zahlwerte
-var leben = 5
+var leben = 10
 
 //Textwerte
-var spielername = "Man"
+var spielername = "Edinkldas"
 var spieltitel = "Pac-" + spielername
 
 //Wahrheitswerte
