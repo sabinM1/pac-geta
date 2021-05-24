@@ -11,7 +11,7 @@ var SoundManager = (function() {
   
   for (var i in sounds) {
     var snd = new Audio("sounds/" + i + ".ogg");
-    snd.volume = 0.1;
+    snd.volume = 0.05;
     sounds[i] = snd;
   }
   
