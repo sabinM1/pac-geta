@@ -14,7 +14,7 @@ function PlayScene(game, maps) {
   
   this._pacman = new Pacman(this, game);
   this._pacman.setStrategy(new PacmanPlaySceneStrategy(this._pacman, this));
-  this._pacman.setSpeed(4);
+  this._pacman.setSpeed(geschwindigkeit);
   this._pacman.requestNewDirection(DIRECTION_RIGHT);
   
   this._currentLevel = 1;
