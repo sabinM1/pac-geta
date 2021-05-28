@@ -80,11 +80,11 @@ Pacman.prototype.move = function () {
   }
   if(direction == DIRECTION_UP)
   {
-    this._sprite._rect._y = bewegeHoch(x,y, speed);
+    this._sprite._rect._y = bewegeRunter(x,y, speed);
   }
   if(direction == DIRECTION_DOWN)
   {
-    this._sprite._rect._y = bewegeRunter(x,y, speed);
+    this._sprite._rect._y = bewegeHoch(x,y, speed);
   }
 
   //this._sprite.move(this._sprite.getDirection());
