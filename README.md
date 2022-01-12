@@ -1,6 +1,7 @@
-## [pac.curpin.win](pac.curpin.win)
+## [pac.curpin.win](https://pac.curpin.win)
 
-făcut în 15 minute&trade;
+făcut în 15 minute&trade;<br>
+vezi și https://github.com/sabinM1/curpin.win
 
 ## Licență MIT
 
